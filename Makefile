@@ -11,4 +11,4 @@ format:
 lint:
 	pylint --disable=R,C rocchio_classify.py
 
-all: install format lint test
+all: install lint test

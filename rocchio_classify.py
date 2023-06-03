@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from tqdm.notebook import tqdm
 
 train_label = pd.read_csv("BBC_News_5_Train_Labels.csv", header=None)
 train = pd.read_csv("BBC_News_5_Train.csv", header=None)
