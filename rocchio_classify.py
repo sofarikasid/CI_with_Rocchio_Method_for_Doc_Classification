@@ -68,12 +68,40 @@ def Rocchio_Classify_test(train_model, test_instance, train_data, train_label):
     return sorted_list[-1][0], sorted_list[-1][1]
 
 
-def run_roochio(Rocchio_Classify_train,test_instance,train,train_label):
-    test_instance = np.array(test.iloc[k])
-    predicted_class, cosin_SIM = Rocchio_Classify_test(
-        Rocchio_Classify_train, test_instance, train, train_label
-    )
+def run_roochio(Rocchio_Classify_train, train, train_label, test, set_index=False, k=None):
+    if set_index:
+        test = test.set_index(0)
+    
+    if k is None:
+        print('The default runs the first 20 documents')
+        k_values = range(0, 20, 1)
+    else:
+        k_values = [k]
+    
+    for k in k_values:
+        test_instance = np.array(test.iloc[k])
+        predicted_class, cosin_SIM = Rocchio_Classify_test(Rocchio_Classify_train, test_instance, train, train_label)
+        print(f"Test Item {k} - Predicted Class: {predicted_class} -- Actual Class: {test_label[0].iloc[k]} COSINE_SIM: {cosin_SIM}")
 
-    print(
-        f"Test Item {k} - Pridicted Class : {predicted_class} -- Actual Class:  {test_label[0].iloc[k]} COSINE_SIM :{cosin_SIM}"
-    )
+def run_roochio_with_metric(Rocchio_Classify_train, train, train_label, test, set_index=False, k=None):
+    if set_index:
+        test = test.set_index(0)
+    
+    if k is None:
+        k_values = range(len(test))
+    else:
+        k_values = [k]
+    
+    predict = []
+    count = 0
+    
+    for k in k_values:
+        test_instance = np.array(test.iloc[k])
+        predicted_class, cosin_SIM = Rocchio_Classify_test(Rocchio_Classify_train, test_instance, train, train_label)
+        predict.append(predicted_class)
+        
+        if predict[k] == test_label[0].iloc[k]:
+            count += 1
+    
+    accuracy = count / len(test)
+    print(f"The Rocchio's Method accuracy is {accuracy}")
