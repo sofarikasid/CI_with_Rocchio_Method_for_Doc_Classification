@@ -6,5 +6,5 @@ Rocchio's method is a classic algorithm used for document classification. It is 
 
 
 **Rocchio's Method**
-$$\left (Q_1 \right) \=    \left(beta \sum_{i=1}^n (R_i)/(n_1) \right) -  \left(gamma \sum_{i=1}^n (S_i)/(n_2) \right)$$
+$$\left (Q_1 \right) \= \left (Q_0 \right) + \left(beta \sum_{i=1}^n (R_i)/(n_1) \right) -  \left(gamma \sum_{i=1}^n (S_i)/(n_2) \right)$$
 
