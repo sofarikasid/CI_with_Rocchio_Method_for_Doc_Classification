@@ -66,3 +66,14 @@ def Rocchio_Classify_test(train_model, test_instance, train_data, train_label):
     sorted_list = sorted(sims.items(), key=lambda x: x[1])
 
     return sorted_list[-1][0], sorted_list[-1][1]
+
+
+def run_roochio(Rocchio_Classify_train,test_instance,train,train_label):
+    test_instance = np.array(test.iloc[k])
+    predicted_class, cosin_SIM = Rocchio_Classify_test(
+        Rocchio_Classify_train, test_instance, train, train_label
+    )
+
+    print(
+        f"Test Item {k} - Pridicted Class : {predicted_class} -- Actual Class:  {test_label[0].iloc[k]} COSINE_SIM :{cosin_SIM}"
+    )
