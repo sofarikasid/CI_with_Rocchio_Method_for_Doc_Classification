@@ -9,6 +9,7 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C rocchio_classify.py
+	pylint --disable=R,C rocchio_classify.py 
+	
 
 all: install lint test
