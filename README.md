@@ -1,5 +1,5 @@
 # Rocchio's Method for Document Classification
-Document Classification Using Rocchio Method with continuous integration
+Document Classification Using Rocchio Method with continuous integration(workflow)
 
 ### What is Rocchio's Method?
 Rocchio's method is a classic algorithm used for document classification. It is a centroid-based approach that assigns a document to a specific class by comparing its similarity to the centroids of different classes. The algorithm is based on the assumption that documents in the same class share similar feature vectors.
