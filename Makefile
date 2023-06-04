@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest --nbval rocchio_classify.py
+	python -m pytest --nbval test_rocchio_classify.py
 
 format:
 	black *.py
