@@ -1,6 +1,3 @@
-
-
-
 from rocchio_classify import * 
 
 def test_Rocchio_Classify_train():
