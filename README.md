@@ -1,3 +1,6 @@
+[![Rocchio Method for classification](https://github.com/sofarikasid/CI_with_Rocchio_Method_for_Doc_Classification/actions/workflows/rocchio_classify.yml/badge.svg)](https://github.com/sofarikasid/CI_with_Rocchio_Method_for_Doc_Classification/actions/workflows/rocchio_classify.yml)
+
+
 # Rocchio's Method for Document Classification
 Document Classification Using Rocchio Method with continuous integration(workflow)
 
@@ -17,3 +20,6 @@ The algorithm employs the concept of relevance feedback, where users provide fee
 This implementation of Rocchio's method is integrated with Continuous Integration (CI), leveraging the power of automated testing and deployment. With CI, every change to the codebase triggers a series of tests that ensure the functionality of the algorithm remains intact.
 
 By using a CI system such as Jenkins or Travis CI, you can set up automatic testing and deployment pipelines for this document classification project. These pipelines can include steps such as code linting, unit tests, integration tests, and even deployment to a production environment. CI ensures that any changes or updates made to the codebase are thoroughly tested and meet the required quality standards.
+
+
+
